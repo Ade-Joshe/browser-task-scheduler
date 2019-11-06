@@ -1,0 +1,26 @@
+{
+    "name": "Browser Schedular",
+    "version": "1.0",
+    "description": "Schedule task on your browser",
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+      },
+      "permissions": ["windows", "declarativeContent"],
+    "browser_action": {
+        "default_popup": "ui/index.html",
+        "default_icon": {
+            "16": "icons/schedule_icon.png",
+            "32": "icons/schedule_icon.png",
+            "48": "icons/schedule_icon.png",
+            "128": "icons/schedule_icon.png"
+          }
+      },
+      "icons": {
+        "16": "icons/schedule_icon.png",
+        "32": "icons/schedule_icon.png",
+        "48": "icons/schedule_icon.png",
+        "128": "icons/schedule_icon.png"
+      },
+    "manifest_version": 2
+  }
