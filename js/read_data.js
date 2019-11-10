@@ -9,17 +9,19 @@
         var str = '<ul>'
 
         data.forEach(function(item) {
-          str += '<li>'+ item.name + '<br/>'+ item.body+ '</li>';
+          str += '<li>'+ item.name + '</li>';
           if(item.done){
             str+= '<p>'+'done'+'</p>'
+            str+=`<a href=item.html?num=${JSON.stringify(item.id)}>`+'view item'+`</a>`            
           }else{
             str+= '<p>'+'not done'+'</p>'
-           str+=`<button>`+'Mark as done'+`</button>`
-            
+           str+=`<a href=item.html?num=${JSON.stringify(item.id)}>`+'view item'+`</a>`            
           }
+          
         }); 
-        
-        str += '</ul>';
-        document.getElementById("slideContainer").innerHTML = str;
+      
+          str += '</ul>';
+          document.getElementById("slideContainer").innerHTML = str;
+          
   });
   
