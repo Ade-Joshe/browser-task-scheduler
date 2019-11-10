@@ -29,7 +29,7 @@
         {
         "matches" : ["http://*/*", "https://*/*"],
         "css": ["css/style.css"],
-        "js" : ["js/read_data.js"]
+        "js" : ["js/read_data.js", "js/getObject.js", "js/write_data.js"]
         }
     ],
     "manifest_version": 2
