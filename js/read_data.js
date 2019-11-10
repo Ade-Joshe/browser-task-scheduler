@@ -1,9 +1,10 @@
+    //check if browser-schedule local storage is undefined and add empty array just in case user clears their local storage
     if(localStorage.getItem('browser-schedule')==undefined){
       localStorage.setItem('browser-schedule', JSON.stringify([]) )
     }
 
     
-    
+    //loop through localstorage item and display content
    document.getElementById('click2').addEventListener('click', function(){
    var data=JSON.parse(localStorage.getItem('browser-schedule'))
         var str = '<ul>'
@@ -25,3 +26,7 @@
           
   });
   
+//delete all items in local storage
+document.getElementById('delete').addEventListener('click', ()=>{
+  localStorage.setItem('browser-schedule', JSON.stringify([]) )
+})
