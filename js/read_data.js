@@ -30,3 +30,5 @@
 document.getElementById('delete').addEventListener('click', ()=>{
   localStorage.setItem('browser-schedule', JSON.stringify([]) )
 })
+
+

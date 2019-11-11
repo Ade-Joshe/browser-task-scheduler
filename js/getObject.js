@@ -13,6 +13,7 @@ param=parseInt(getParam()['num'])
 //get the object from localstorage using the param index
 var data=JSON.parse(localStorage.getItem('browser-schedule'))[param]
 
+
 //pass in object value to HTML
 
 document.getElementById('title').innerHTML=data.name;
@@ -45,6 +46,8 @@ document.getElementById('mark').addEventListener('click', function(){
       var data2= data_arr
       //stringify object and add back to localstorage
       localStorage.setItem("browser-schedule", JSON.stringify(data2))
+      document.getElementById('complete').style.display="block";
+      document.getElementById('mark').style.display="none"
 })
 
 //delete item from list
