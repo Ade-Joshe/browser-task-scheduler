@@ -35,9 +35,10 @@ document.getElementById('mark').addEventListener('click', function(){
       let name =data.name;
       let body = data.body; 
       let time = data.time;
+      let created_at=data.created_at
       let done= true;
       //put in object to a new object variable, changing done to true
-      value={'id':id, 'name':name, 'body':body, 'time':time, 'done':done};
+      value={'id':id, 'name':name, 'body':body, 'time':time, "created_at":created_at, 'done':done};
       data_arr=JSON.parse(localStorage.getItem('browser-schedule'))
       //delete object from the array
       data_arr.splice(index, 1)

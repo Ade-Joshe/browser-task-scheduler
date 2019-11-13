@@ -32,3 +32,19 @@ document.getElementById('delete').addEventListener('click', ()=>{
 })
 
 
+//check if item has been in localstorage for over or equal 24 hours
+//if true delete item
+var data=JSON.parse(localStorage.getItem('browser-schedule'))
+data.forEach((item)=>{
+  var time_now={time: Date.now()}
+  diff= Math.abs(item.created_at - time_now.time) / 36e5;
+  if(diff>=24){
+    var index= JSON.parse(localStorage.getItem('browser-schedule')).indexOf(item)
+    data_arr=JSON.parse(localStorage.getItem('browser-schedule'))
+    //remove item from list
+    data_arr.splice(index, 1)
+    //reassign arr to a new variable and save in local storage
+    data2= data_arr
+    localStorage.setItem("browser-schedule", JSON.stringify(data2))
+  }
+})
