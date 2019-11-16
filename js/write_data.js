@@ -13,6 +13,9 @@ document.getElementById('postData').addEventListener('submit', postData);
           data.push(value);
           var data2= data
           localStorage.setItem("browser-schedule", JSON.stringify(data2))
+      document.getElementById('name').value=""
+      document.getElementById('body').value=""
+      document.getElementById('time').value=""
      
   }
 
