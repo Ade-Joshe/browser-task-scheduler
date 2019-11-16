@@ -5,26 +5,36 @@
 </head>
 
 <body>
-  <p>List of to do</p>
+  <h3 align="center">List of to do</h3>
   <div id="slideContainer">
     
   </div>
 
-  <hr/>
-  <button id="click2">Get list</button>
-  <button id="delete">Delete all</button>
-  <form  id="postData">
-    <div>
-        <input required type="text" name="" id="name">
-    </div>
-    <div>
-      <input required type="time" name="" id="time">
-    </div>
-    <div>
-        <textarea required name="" id="body" cols="20" rows="5"></textarea>
-    </div>
-    <input type="submit" value="SEND POST">
-</form>
+  <div align="center">
+      <button class="form-button" id="click2">Get list</button>
+      <button class="form-button" id="delete">Delete all</button>
+  </div>
+  
+
+
+  <span align="center">
+    <p class="form-header"><b>Schedule a task</b></p>
+      <form  id="postData">
+          <div>
+              <input class="form" placeholder="Name of task" required type="text" name="" id="name">
+          </div>
+          <div>
+            <p>What time would you start?</p>
+            <input class="form" required type="time" name="" id="time">
+          </div>
+          <br/>
+          <div>
+              <textarea class="form text-area" placeholder="Describe your task" required name="" id="body" cols="20" rows="5"></textarea>
+          </div>
+          <input class="form form-button" type="submit" value="ADD">
+      </form>
+    </span>
+  
 <script src="../js/read_data.js"></script>
 <script src="../js/write_data.js"></script>
 

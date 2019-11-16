@@ -7,21 +7,23 @@
     //loop through localstorage item and display content
    document.getElementById('click2').addEventListener('click', function(){
    var data=JSON.parse(localStorage.getItem('browser-schedule'))
-        var str = '<ul>'
+        var str = `<div style="padding-left:5px; padding-right:5px; width:100px;">`
 
         data.forEach(function(item) {
-          str += '<li>'+ item.name + '</li>';
+          str += `<h3 style=" text-transform: uppercase;">`+ item.name + `</h3> &#9775; `;
+          str += `<small> Time: `+ `<i>`+ item.time+ `</i>`+`</small>`;
           if(item.done){
-            str+= '<p>'+'done'+'</p>'
-            str+=`<a href=item.html?num=${JSON.stringify(item.id)}>`+'view item'+`</a>`            
+            str+= `<p style="font-size:20px;">`+'&#x2713;'+'</p>'
+            str+=`<a style="text-decoration: none; color:black" href=item.html?num=${JSON.stringify(item.id)}>`+'view item'+`</a>`            
           }else{
             str+= '<p>'+'not done'+'</p>'
-           str+=`<a href=item.html?num=${JSON.stringify(item.id)}>`+'view item'+`</a>`            
+           str+=`<a style="text-decoration: none; color:black" href=item.html?num=${JSON.stringify(item.id)}>`+'view item'+`</a>`            
           }
+          str+=`<hr/>`
           
         }); 
       
-          str += '</ul>';
+          str += '</div>';
           document.getElementById("slideContainer").innerHTML = str;
           
   });
