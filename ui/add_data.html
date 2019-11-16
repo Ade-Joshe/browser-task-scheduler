@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="width:350px;">
+    <span align="center">
+        <h5>Schedule a task</h5>
+
+        <form id="postData">
+                <div class="form-group">
+                  <label>Title of task</label>
+                  <input required type="text" class="form-control" id="name" placeholder="Name of task">
+                </div>
+               
+                <div class="form-group">
+                        <label>When would it start?</label>
+                        <input required type="time" class="form-control" id="time">
+                      </div>
+
+                <div class="form-group">
+                  <label>Quickly describe the task</label>
+                  <textarea required placeholder="describe your task..." class="form-control" id="body" rows="3"></textarea>
+                </div>
+                <input class="btn btn-outline-success" type="submit" value="ADD">
+
+              </form>
+         
+        </span>
+        <div align="center"><b><a style="text-decoration: none; color:black" href="index.html">Go back</a></b></div> 
+
+
+       
+</body>
+<script src="../js/write_data.js"></script>
+
+</html>

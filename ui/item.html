@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
         <link rel="stylesheet" href="../css/style.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-<body>
-    <h3 align="center" id="title"></h3>
-    <p style="padding-left: 5px; padding-right: 5px; width:350px;" id="body"></p>
-    <i id="time"></i> 
-    <br/>
-    <b id="complete">completed</b>
-    <br/>
-    <div style="display: flex;" align="center">
-            <button class="form-button" id="unmark">untick</button>&nbsp;&nbsp;
-            <button class="form-button" id="mark">tick</button>&nbsp;&nbsp;
-            <button class="form-button" id="delete">delete</button>
-    </div>
-    <br/>
-   <div align="center"><b><a style="text-decoration: none; color:black" href="index.html">Go back</a></b></div> 
+<body class="container" style="padding-left: 8px; padding-right: 8px; width:350px;">
+    
+    
+    <div style="padding-top: 8px; padding-bottom: 5px;" class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5  id="title" class="card-title"></h5>
+                  <p id="body" class="card-text"></p>
+                  <i id="time"></i> 
+                  <p id="complete" class="blockquote-footer">Marked as done</p>
+                  <a href="index.html" class="card-link">Go back</a>
+                </div>
+              </div>
+              <div style="display: flex;">
+                        <button class="btn btn-outline-dark" id="unmark">untick</button>&nbsp;
+                        <button class="btn btn-outline-success" id="mark">tick</button>&nbsp;
+                        <button class="btn btn-outline-warning" id="delete">delete</button>
+                </div>
 </body>
 <script src="../js/getObject.js"></script>
 

@@ -2,41 +2,29 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
-  <h3 align="center">List of to do</h3>
+<body style="width:350px;">
+  <div align="center">
+      <h3 style="font-size: medium;">List of task</h3>
+      <p id="empty">Your task looks empty, care to add more?</p>
+  </div>
   <div id="slideContainer">
     
   </div>
 
   <div align="center">
-      <button class="form-button" id="click2">Get list</button>
-      <button class="form-button" id="delete">Delete all</button>
+    <div style="padding-top: 5px; padding-bottom: 5px;;">
+        <a href="add_data.html"> <button class="btn btn-outline-primary">Add a task</button></a>
+        <button class="btn btn-outline-danger" id="delete">Delete all</button>
+    </div>
   </div>
+
+
   
-
-
-  <span align="center">
-    <p class="form-header"><b>Schedule a task</b></p>
-      <form  id="postData">
-          <div>
-              <input class="form" placeholder="Name of task" required type="text" name="" id="name">
-          </div>
-          <div>
-            <p>What time would you start?</p>
-            <input class="form" required type="time" name="" id="time">
-          </div>
-          <br/>
-          <div>
-              <textarea class="form text-area" placeholder="Describe your task" required name="" id="body" cols="20" rows="5"></textarea>
-          </div>
-          <input class="form form-button" type="submit" value="ADD">
-      </form>
-    </span>
   
 <script src="../js/read_data.js"></script>
-<script src="../js/write_data.js"></script>
 
 </body>
 </html>
