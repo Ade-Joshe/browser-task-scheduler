@@ -22,9 +22,6 @@
         "48": "icons/schedule_icon.png",
         "128": "icons/schedule_icon.png"
       },
-      "web_accessible_resources": [
-        "js/data.json"
-    ],
     "content_scripts": [
         {
         "matches" : ["http://*/*", "https://*/*"],

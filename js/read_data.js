@@ -5,28 +5,32 @@
 
     
     //loop through localstorage item and display content
-   document.getElementById('click2').addEventListener('click', function(){
    var data=JSON.parse(localStorage.getItem('browser-schedule'))
-        var str = `<div style="padding-left:5px; padding-right:5px; width:100px;">`
-
+        var str = `<div style="padding-left:5px; padding-right:5px;" class="container>`
+          if(data.length < 1){
+            document.getElementById('empty').style.display="block"
+          }else{
+            document.getElementById('empty').style.display="none"
+          }
         data.forEach(function(item) {
-          str += `<h3 style=" text-transform: uppercase;">`+ item.name + `</h3> &#9775; `;
-          str += `<small> Time: `+ `<i>`+ item.time+ `</i>`+`</small>`;
+          
+          str+=`<ul class="list-group">`
+          str+=`<a href="item.html?num=${JSON.stringify(item.id)}">`
+         str+= `<li class="list-group-item d-flex justify-content-between align-items-center">`+ item.name+
+          `<span class="badge">${item.time}</span>
+          </li>`
+          str+=`</a>`
           if(item.done){
             str+= `<p style="font-size:20px;">`+'&#x2713;'+'</p>'
-            str+=`<a style="text-decoration: none; color:black" href=item.html?num=${JSON.stringify(item.id)}>`+'view item'+`</a>`            
           }else{
-            str+= '<p>'+'not done'+'</p>'
-           str+=`<a style="text-decoration: none; color:black" href=item.html?num=${JSON.stringify(item.id)}>`+'view item'+`</a>`            
+            str+= '<p>'+'pending'+'</p>'
           }
-          str+=`<hr/>`
           
         }); 
-      
+          str+=`</ul>`
           str += '</div>';
           document.getElementById("slideContainer").innerHTML = str;
           
-  });
   
 //delete all items in local storage
 document.getElementById('delete').addEventListener('click', ()=>{
