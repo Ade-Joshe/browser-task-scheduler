@@ -15,7 +15,7 @@
         data.forEach(function(item) {
           
           str+=`<ul class="list-group">`
-          str+=`<a href="item.html?num=${JSON.stringify(item.id)}">`
+          str+=`<a style="color:black;" href="item.html?num=${JSON.stringify(item.id)}">`
          str+= `<li class="list-group-item d-flex justify-content-between align-items-center">`+ item.name+
           `<span class="badge">${item.time}</span>
           </li>`
@@ -35,6 +35,9 @@
 //delete all items in local storage
 document.getElementById('delete').addEventListener('click', ()=>{
   localStorage.setItem('browser-schedule', JSON.stringify([]) )
+  document.getElementById('slideContainer').innerHTML="";
+  document.getElementById('empty').style.display="block"
+
 })
 
 
