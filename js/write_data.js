@@ -16,7 +16,17 @@ document.getElementById('postData').addEventListener('submit', postData);
       document.getElementById('name').value=""
       document.getElementById('body').value=""
       document.getElementById('time').value=""
-     
+      chrome.notifications.create(
+        'id2',{   
+            type:"basic",
+            title:`New task scheduled`,
+            message:`Your new task ${name} has been scheduled for ${time}`,
+            iconUrl:"../icons/schedule_icon.png"
+        },
+        function() { 
+      
+        }     
+      );
   }
 
 
