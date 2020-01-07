@@ -1,0 +1,45 @@
+body {
+    width: 350px;
+    padding: 40px;
+    font-family: raleway;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-left: unset;
+    margin-right: unset;
+}
+
+body div:nth-child(2) {
+    margin-top: 25px;
+}
+
+body div:first-child h1 {
+    font-weight: bolder;
+    font-family: raleway;
+    margin-left: 10px;
+}
+
+small {
+    text-align: center;
+}
+
+body div:nth-child(2) h3{
+    font-size: 14px;
+    text-align: center;
+}
+
+input[type='submit'] {
+    margin: auto;
+}
+
+.itemBox li:hover {
+cursor: pointer;
+background-color: #00000012;
+}
+
+a, a:hover, a:visited, li {
+    text-decoration: none;
+}
