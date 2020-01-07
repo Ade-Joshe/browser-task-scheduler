@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" href="../css/style.css"/>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body style="width:350px;">
-  <div align="center">
-      <h3 style="font-size: medium; padding-top: 5px;">List of task</h3>
-      <p style="color:grey; font-size: 10px;" id="empty">Your task lis currently empty.</p>
-  </div>
-  <div id="slideContainer">
-    
+<body>
+  <div style="display: flex; flex-direction: row;">
+    <img src="../icons/schedule_icon.png"
+      style="width: 50px; height: 50px; margin: auto; margin-left: unset; margin-right: unset;" alt="">
+    <h1 style="font-weight: bolder;font-family: Raleway; margin-left: 10px;">Browser <br /> Scheduler</h1>
   </div>
 
   <div align="center">
-    <div style="padding-top: 5px; padding-bottom: 5px;;">
-        <a href="add_data.html"> <button class="btn btn-outline-primary">Add a task</button></a>
-        <button class="btn btn-outline-danger" id="delete">Delete all</button>
+    <h3 style="font-size: 14px; margin-top: 30px;">TASK LIST</h3>
+    <p style="color:grey; font-size: 10px;" id="empty">Your task list is currently empty.</p>
+  </div>
+  <div id="slideContainer">
+
+  </div>
+
+  <div align="center">
+    <div style="padding: 5px">
+      <a href="add_data.html" class="btn btn-primary"> Add a task</a>
+      <button class="btn btn-danger" id="delete">Delete all</button>
     </div>
   </div>
 
-
-  
-  
-<script src="../js/read_data.js"></script>
+  <script src="../js/read_data.js"></script>
 
 </body>
+
 </html>

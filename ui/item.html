@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <link rel="stylesheet" href="../css/style.css"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-<body class="container" style="padding-left: 8px; padding-right: 8px; width:350px;">
-    
-    <br/>
-    <div style="padding-top: 8px; padding-bottom: 5px;" class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5  id="title" class="card-title"></h5>
-                  <p id="body" class="card-text"></p>
-                  <i id="time"></i> 
-                  <small id="complete" class="blockquote-footer">Marked as done</small>
-                  <a href="index.html" class="card-link">Go back</a>
-                </div>
-              </div>
-              <div style="display: flex; padding-top: 5px;;">
-                        <button class="btn btn-outline-dark" id="unmark">Uncheck</button>&nbsp;
-                        <button class="btn btn-outline-success" id="mark">Check</button>&nbsp;
-                        <button class="btn btn-outline-warning" id="delete">Delete</button>
-                </div>
-                <br/>
+
+<body>
+  <div style="display: flex; flex-direction: row;">
+    <img src="../icons/schedule_icon.png"
+      style="width: 50px; height: 50px; margin: auto; margin-left: unset; margin-right: unset;" alt="">
+    <h1 style="font-weight: bolder;font-family: Raleway; margin-left: 10px;">Browser <br /> Scheduler</h1>
+  </div>
+
+  <div style="display: flex;justify-content: space-between;">
+    <a href="index.html" class="card-link"> &leftarrow; Go back</a><br /><br />
+  </div>
+  <div class="card" style="width: 100%;">
+    <div class="card-body">
+      <h5 id="title" class="card-title"></h5>
+      <hr />
+      <p id="body" class="card-text"></p>
+      <div style="display: flex; justify-content: space-around;">
+        <i id="time"></i>
+        <small id="complete" class="blockquote-footer">Marked as done</small>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+        <button class="btn btn-dark" id="unmark">Uncheck</button>
+        <button class="btn btn-success" id="mark">Check</button>
+        <button class="btn btn-danger" id="delete">Delete</button>
+      </div>
+    </div>
+  </div>
+  <br />
 </body>
 <script src="../js/getObject.js"></script>
 
